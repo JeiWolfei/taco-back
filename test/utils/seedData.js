@@ -15,17 +15,18 @@ module.exports = ({ totalUsers = DEFAULT_TOTAL_USERS, totalLogs = DEFAULT_TOTAL_
         [...Array(totalLogs)].map(() => {
           return Log.create({
             place_id: chance.string(),
-            name: chance.pickone(['Baskin Organics', 'Crazy Ice', 'Sprinkles', 'Berry Berry', 'Banana Split']),
+            name: chance.pickone(['Dos Tacos Locos', 'Taco Mamma', 'Mighty Taco', 'Taco Treasure', 'Tiny Taco']),
             user: chance.pickone(users)._id,
             rating: { 
+              taco: chance.integer({ min: 1, max: 5 }),
               price: chance.integer({ min: 1, max: 5 }),
               vibe: chance.integer({ min: 1, max: 5 }),
-              flavor: chance.integer({ min: 1, max: 5 }),
             },
-            tags: chance.pickone(['organic', 'gluten-free', 'dairy-free', 'vegan', 'kid-friendly', 'nut-free']),
+            tags: chance.pickone(['organic', 'gluten-free', 'dairy-free', 'vegan', 'mexican', 'authentic', 'bean', 'tofu']),
             price: chance.integer({ min: 0, max: 3 })
           });
         })
       );
     });
 };
+

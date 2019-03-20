@@ -11,19 +11,19 @@ describe('Logs tests', () => {
           .set('Authorization', `Bearer ${getToken()}`)
           .send({
             place_id: '1234',
-            name: 'Cold Stone Creamery',
+            name: 'Mighty Taco',
             tags:['dairy-free', 'organic'],
             price: 2,
-            rating: { price: 3, vibe: 3, flavor: 3 },
+            rating: { taco: 3, price: 3, vibe: 3 },
             user: user._id,
           })
           .then(res => {
             expect(res.body).toEqual({
               place_id: '1234',
-              name: 'Cold Stone Creamery',
+              name: 'Mighty Taaco',
               tags: ['dairy-free', 'organic'],
               price: 2,
-              rating: { price: 3, vibe: 3, flavor: 3 },
+              rating: { taco: 3, price: 3, vibe: 3 },
               _id: expect.any(String),
               user: expect.any(String)
             });

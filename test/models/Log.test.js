@@ -19,18 +19,18 @@ describe('Log Tests', () => {
   it('validates a good model', () => {
     const log = new Log({
       place_id: '1234',
-      name: 'Portland Creamery',
+      name: 'Hot Taco',
       user: Types.ObjectId(),
-      rating: { price: 4, vibe: 4, flavor: 5 },
+      rating: { taco: 5, price: 4, vibe: 4 },
       tags: ['organic', 'dairy-free'],
       price: 3
     });
     
     expect(log.toJSON()).toEqual({
       place_id: '1234',
-      name: 'Portland Creamery',
+      name: 'Hot Taco',
       user: expect.any(Types.ObjectId),
-      rating: { price: 4, vibe: 4, flavor: 5 },
+      rating: { taco: 5, price: 4, vibe: 4 },
       tags: ['organic', 'dairy-free'],
       price: 3,
       _id: expect.any(Types.ObjectId)

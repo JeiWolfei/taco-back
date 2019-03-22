@@ -33,6 +33,7 @@ describe('Log Tests', () => {
       rating: { taco: 5, price: 4, vibe: 4 },
       tags: ['organic', 'dairy-free'],
       price: 3,
+      image: 'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiDifGhqZHhAhXF7Z4KHZo6Av0QjRx6BAgBEAU&url=https%3A%2F%2Fwww.hottaco.com%2F&psig=AOvVaw3Sfg0Bu5XrmiKrVm-cNlWP&ust=1553192002920323',
       _id: expect.any(Types.ObjectId)
     });
   });

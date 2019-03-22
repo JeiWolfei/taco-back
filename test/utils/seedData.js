@@ -22,8 +22,8 @@ module.exports = ({ totalUsers = DEFAULT_TOTAL_USERS, totalLogs = DEFAULT_TOTAL_
               price: chance.integer({ min: 1, max: 5 }),
               vibe: chance.integer({ min: 1, max: 5 }),
             },
-            tags: chance.pickone(['organic', 'cheese', 'gourmet', 'gluten-free', 'dairy-free', 'vegan', 'mexican', 'authentic', 'bean', 'tofu', 'spicy']),
-            price: chance.integer({ min: 0, max: 3 })
+            tags: chance.pickone(['organic', 'cheese', 'gourmet', 'gluten-free', 'dairy-free', 'vegan', 'mexican', 'authentic', 'bean', 'tofu', 'spicy', 'delicious']),
+            price: chance.integer({ min: 0, max: 5 })
           });
         })
       );

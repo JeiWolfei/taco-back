@@ -16,6 +16,7 @@ describe('Logs tests', () => {
             price: 2,
             rating: { taco: 3, price: 3, vibe: 3 },
             user: user._id,
+            image: 'https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj809v70Y7hAhWOqZ4KHRZaB7gQjRx6BAgBEAU&url=https%3A%2F%2Fpdx.eater.com%2Fmaps%2Fbest-tacos-portland-map&psig=AOvVaw28HvlFseUFcceudno5PUJL&ust=1553099847046895',
           })
           .then(res => {
             expect(res.body).toEqual({
@@ -25,7 +26,8 @@ describe('Logs tests', () => {
               price: 2,
               rating: { taco: 3, price: 3, vibe: 3 },
               _id: expect.any(String),
-              user: expect.any(String)
+              user: expect.any(String),
+              image: expect.any(String)
             });
           });
       });
@@ -59,7 +61,8 @@ describe('Logs tests', () => {
           user: expect.any(Object),
           rating: expect.any(Object),
           tags: expect.any(Array),
-          price: expect.any(Number)
+          price: expect.any(Number),
+          image: expect.any(String)
         });
       });
   });
@@ -80,7 +83,8 @@ describe('Logs tests', () => {
           user: expect.any(Object),
           rating: expect.any(Object),
           tags: expect.any(Array),
-          price: expect.any(Number)
+          price: expect.any(Number),
+          image: expect.any(String)
         });
       });
   });
